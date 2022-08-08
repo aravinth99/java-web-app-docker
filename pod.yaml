@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: javawebapp
+  namespace: default
+  labels:
+    app: javawebapp
+spec:
+  containers:
+  - name: javawebapp
+    image: arvinthdocker/javawebapp:tagVersion
+    ports:
+      - containerport: 9090
